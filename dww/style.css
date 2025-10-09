@@ -1,0 +1,89 @@
+:root{
+    --main: #FF7400;
+    --secondary-100: #FFFFFF;
+    --secondary-200: #F9F9F9;
+    --secondary-400: #BABABA;
+    --secondary-800: #141414;
+
+    --space-1: 1em;
+    --space-2: 2em;
+    --space-3: 3em;
+    --space-4: 4em;
+}
+
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: #fff;
+}
+
+main {
+    max-width: 852px;
+    margin: 0 auto;
+    background-color: var(--secondary-200);
+
+}
+
+
+#top-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: var(--space-2);
+
+    background-color: #84DCFF;
+    min-height: 40svh;
+
+    #color-info{
+        align-self: flex-end;
+    }
+}
+
+#bottom-section{
+    padding: var(--space-1);
+    min-height: 60svh;
+
+
+    #color-palette-section{
+        padding: var(--space-1) 0;
+
+        #colors-container{
+            padding: var(--space-1) 0;            
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 1em;
+            
+            .color-box{
+                width: 2em;
+                height: 2em;
+                
+            }
+        }
+    }
+
+    .button {
+        position: fixed;
+        bottom: 1em;
+    }
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+    padding: var(--space-1) 0;
+    border-radius: .2em;
+}
+
+.primary {
+    background-color: var(--main);
+    color: var(--secondary-100);
+}
