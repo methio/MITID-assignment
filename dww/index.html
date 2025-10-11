@@ -4,40 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment</title>
+    <!-- custom styles -->
     <link href="style.css" rel="stylesheet"></link>
+    <!-- INTER google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Adafruit IO custom library -->
+    <script src="https://cdn.jsdelivr.net/gh/methio/adafruitIO-class@latest/index.js"></script>
+    <!-- alwan color picker -->
+    <script src="https://cdn.jsdelivr.net/npm/alwan@2/dist/js/alwan.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alwan@2/dist/css/alwan.min.css"/>
+    <!-- get color name from its hex value -->
+     <script src="https://chir.ag/projects/ntc/ntc.js"></script>
+    <!-- script custom -->
     <script src="script.js" defer></script>
+   
 </head>
 <body>
+    <main class="is-flex column">
+        <div id="top-section" class="is-flex column">
 
-    <main>
-        <div id="top-section">
             <i data-lucide="arrow-left"></i>
 
             <div id="color-info">
                 <h1>#84DCFF</h1>
                 <h3>light blue</h3>
             </div>
+
         </div>
 
         <div id="bottom-section">
-            <div id="bottom-infos">
+            <div id="bottom-infos" class="is-flex row">
+
                 <h1>Ambient light</h1>
-                <!-- toggle -->
-            </div>
-            <div id="color-palette-section">
-                <h3>Set a color</h3>
-                <div id="colors-container">
-                </div>
+
+                <!-- toggle button from : https://stackoverflow.com/questions/76837048/creating-the-simplest-html-toggle-button -->
+                <label class="toggle">
+                    <input type="checkbox" id="btnToggle" name="btnToggle" checked />
+                    <span class="slider"></span>
+                </label>
+
             </div>
 
-            <p class="primary button">Set a new color</p>
-        </div>
-                
+            <div id="color-palette-section">
+
+                <h3>Set a color</h3>
+                <div id="colors-container" class="is-flex row"><!-- we populate container with javascript--></div>
+
+            </div>
+
+            <div id="new-color-section">
+
+                <h3>Pick a custom color</h3>
+
+                <div id="color-picker-container" class="is-flex row">
+                    <p id="new-color-info">forest green</p>
+                    <div id="color-picker"></div>
+                </div>
+
+                <p class="primary button" id="button-create-color" popovertarget="color-picker-pop">Add <span id="new-color-button">forest green</span></p>
+
+            </div>
+
+                      
+        </div>                
     </main>
-    
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-    lucide.createIcons();
-</script>
+
+    <!-- lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
 </body>
 </html>
