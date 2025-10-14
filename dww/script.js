@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // setup adafruitIO requests
     const username = "methio";
-    const activeKey = "aio_SnNZ66xBghS1kpAapkeplps7dDRq";
+    const activeKey = "aio_Pcdt15ROlZChsv9xdLc5S2BrVFo6";
     const IO = new AdafruitIO(username, activeKey);
 
     
@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 colorDisplay.style.backgroundColor = box.dataset.color;
 
                 // off to avoid flooding the feed
-                // IO.postData("color25", box.dataset.color);
+                 IO.postData("color25", box.dataset.color);
             });
         });
     }
