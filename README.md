@@ -41,6 +41,8 @@ Create a subfolder for each project iteration.
 
 #### Schematic view 
 
+![schematic view](images/schematic-view.png)
+
 #### Photographs
 Youtube video of the prototype lerping between colors
 
