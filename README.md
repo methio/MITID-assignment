@@ -34,3 +34,28 @@ Create a subfolder for each project iteration.
 2.An image and/or a link to your Figma user flow.
 
 3.The complete code for your project, organized within a dedicated folder named dww.
+
+## My submission 
+
+### CWIOT
+
+#### Schematic view 
+
+#### Photographs
+Youtube video of the prototype lerping between colors
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Rb1v3GvMv4M
+" target="_blank"><img src="http://img.youtube.com/vi/Rb1v3GvMv4M/0.jpg" 
+alt="youtube demo video" width="400" height="300" border="10" /></a>
+
+### DWW
+
+#### Moodboard
+
+![figma moodboard](images/moodboard.png)
+
+#### User flow 
+[See the user flow in figma↗](https://www.figma.com/design/vJZb0jIlyBSZZtqP1hdXyH/Assignment-designing-with-web-demo?node-id=0-1&t=i6oES4CvV3SZhfUw-1)
+
+![figma user flow](images/fuser-flow.png)
+
