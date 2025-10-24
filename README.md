@@ -1,11 +1,11 @@
-#MITID Assignment
+# MITID Assignment
 
 An example of a final submission for the Designing with Web (DWW) and Connected Worlds & IoT (CWIOT) courses.
 **The link to your repository must be submitted on Brightspace, under the Designing with Web course only!**
 
-##What should be included in your repository
+## What should be included in your repository
 
-###For CWIOT
+### For CWIOT
 
 1.The complete code for your project, organized within a dedicated folder named cwiot.
 
@@ -27,7 +27,7 @@ Create a subfolder for each project iteration.
 
 3.A video or a set of photos showing your project in operation.
 
-###For DWW
+### For DWW
 
 1.An image of your moodboard.
 
