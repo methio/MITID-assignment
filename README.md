@@ -19,6 +19,7 @@ Pour ce devoir, vous devez réaliser le prototype de votre projet et le document
 | **dww** | [Moodboard](#moodboard) | dans le fichier [documentation.md↗](your-name/documentation.md) |
 | **dww** | [UI on figma](#user-flow) | dans le fichier [documentation.md↗](your-name/documentation.md) |
 | **dww** | [Code of the web part](#user-flow) | dans le dossier [web-prototype↗](your-name/web-prototype/) |
+| **cwiot & dww**| [video demo](#video)| dans le fichier [documentation.md↗](your-name/documentation.md)|
 
 
 ### cwiot part
@@ -74,7 +75,7 @@ Pour ajouter votre schematic view dans votre `documentation.md`, il faut ajouter
 </picture>
 ```
 
-### For DWW
+### dww part
 
 #### **Moodboard**
 Add an image of your moodboard in your `documentation.md` file.
@@ -105,6 +106,27 @@ Dans la `documentation.md`, il vous suffit de changer l'url dans la parenthèse:
 
 #### **Code**
 Vous devez partager l'intégralité du code de votre interface web. Je vous conseille de travailler directement dans le dossier [web-prototype↗](your-name/web-prototype/). Vos fichiers html, css et javascript doivent se trouver dans ce dossier. 
+
+### cwiot & dww part
+
+#### **video**
+Vous devez présenter votre projet sous la forme d'une vidéo de démonstration. Voici une trame pour votre vidéo. 
+
+Chapitre 1:
+Qui êtes vous
+Pourquoi vous avez construit ce projet
+
+Chapitre 2: Présenter le projet
+En une ou deux phrases, expliquer comment fonctionne votre projet. 
+
+Chapitre 3: Fonctionnement
+Commencer par le point d'entrée\
+:student: *C'est un prototype electronique qui capte de la lumière de la pièce*
+Expliquer ce qu'il se passe ensuite\
+:student: *la lumière est traduite en une valeure numérique, cette valeur numérique est envoyée en wifi à une base de donnée adafruit. Mon site web lit les nouvelles valeurs qui arrivent sur la base de donnée adafruit.*
+Expliquer ce qu'il se passe finalement\
+:student: *Finalement, le site web change de thème coloré en fonction de la lumière de la pièce*
+
 
 ### Comment documenter mon travail
 
