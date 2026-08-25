@@ -4,8 +4,8 @@ Ce repo est un template à dupliquer pour vous aider à réaliser votre projet p
 
 Voici la table des matières de cette page 
 - [What you need to produce](#what-you-need-to-produce)
-- [Submission demo](#submission-demo)
-- [How to clone this repo](#clone-this-repo)
+- [Submission demo](#demo)
+- [How to clone this repo]()
 - [How to submit]()
 
 ## What you need to produce
@@ -106,9 +106,40 @@ Dans la `documentation.md`, il vous suffit de changer l'url dans la parenthèse:
 #### **Code**
 Vous devez partager l'intégralité du code de votre interface web. Je vous conseille de travailler directement dans le dossier [web-prototype↗](your-name/web-prototype/). Vos fichiers html, css et javascript doivent se trouver dans ce dossier. 
 
+
+--- 
+
+## Submission demo
+
+### CWIOT
+
+#### Schematic view 
+
+![schematic view](images/schematic-view.png)
+
+#### Video
+Youtube video of the prototype lerping between colors
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Rb1v3GvMv4M
+" target="_blank"><img src="http://img.youtube.com/vi/Rb1v3GvMv4M/0.jpg" 
+alt="youtube demo video" width="400" height="300" border="10" /></a>
+
+### DWW
+
+#### Moodboard
+
+![figma moodboard](images/moodboard.png)
+
+#### User flow 
+[See the user flow in figma↗](https://www.figma.com/design/vJZb0jIlyBSZZtqP1hdXyH/Assignment-designing-with-web-demo?node-id=0-1&t=i6oES4CvV3SZhfUw-1)
+
+![figma user flow](images/fuser-flow.png)
+
+## How to clone this repo
+
 ### Comment documenter mon travail
 
-Comme avez pu le voir, la plupart de votre travail doit être documenté dans le fichier [documentation.md↗](/your-name/documentation.md). C'est le fichier qui sert de page d'accueil dans un repo github. Ce fichier `documentation.md` est écrit en markdown. C'est un langage utilisé dans de nombreux éditeurs de textes, comme notion par exemple. Vous trouverez un guide de la syntaxe sur github: [Basic writing and formatting syntax↗️](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). Le fichier [documentation.md↗](/your-name/documentation.md) est un template que vous devriez vous appropriez et adapter à votre projet.
+Votre travail doit être documenté dans un fichier `README.md`. C'est le fichier qui sert de page d'accueil dans un repo github. Ce fichier `README.md` est écrit en markdown. C'est un langage utilisé dans de nombreux éditeurs de textes, comme notion par exemple. Vous trouverez un guide de la syntaxe sur github: [Basic writing and formatting syntax↗️](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). 
 
 Voici les bases de la syntaxe:
 ```
@@ -122,31 +153,14 @@ _Mon texte en italique_     ⬅️ pour mettre un texte en italique
 
 [mon texte](https://mon-lien.fr)    ⬅️ pour créer un lien
 ![My image](link/to/image.png)      ⬅️ pour ajouter une image
-<picture>                           ⬅️ version alternative pour décider la width et la height de votre image.
-    <img
-        src="demo/images/schematic-view.png" 
-        alt="schematic view" 
-        height="360" 
-        width="640" 
-    />
-</picture>
 ```
-
-## Submission demo
-Vous pouvez retrouver une démo d'un rendu type pour ce devoir. Tout est rangé dans le dossier [demo↗](/demo/), notamment la page  [demo-documentation↗](/demo/demo-documentation.md).
-
-## Clone this repo
-
-Pour vous mettre au travail, vous devez commencer par cloner ce repo.
-
-![clone this repo](demo/images/clone-repo.jpg)
 
 ## How to submit 
 
-Suivez ces étapes pour bien soumettre votre travail. Il n'y a rien de sorcier, mais prennez le temps de bien lire toute cette page, puis faites le sur votre ordinateur. Si vous avez un doute, n'hésitez pas à me faire un mp sur slack ou me demander directement au makers'lab. Je me rendrais disponible pour vous aider. 
+Suivez ces étapes pour bien soumettre votre travail. Il n'y a rien de sorcier, mais prennez le temps de bien lire toute cette section, puis faites le sur votre ordinateur. Si vous avez un doute, n'hésitez pas à me faire un mp sur slack ou me demander directement au makers'lab. Je me rendrais disponible pour vous aider. 
 
 Un dernier commit. Assurez-vous de bien push la dernière version de votre travail dans votre repo sur github. Je n'ai pas accès au contenu que vous gardez localement. 
 
-
+GIF copier le lien du repo et le poser dans la boite de soumission sur BS. 
 
 **The link to your repository must be submitted on Brightspace, under the Designing with Web course only!**
