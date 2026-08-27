@@ -1,40 +1,41 @@
 # MITID Assignment
 
-Ce repo est un template à dupliquer pour vous aider à réaliser votre projet pour les cours dww et cwiot. Il sert à documenter l'ensemble de votre processus de travail, prennez le temps de bien lire cette page avant de commencer à travailler. 
+This repository is a template designed to help you complete your project for the dww and cwiot courses. It is intended to document your entire working process. Please take the time to read this page carefully before you begin working.
 
-Voici la table des matières de cette page 
+Here is the table of contents for this page:
 - [What you need to produce](#what-you-need-to-produce)
 - [Submission demo](#submission-demo)
 - [How to clone this repo](#clone-this-repo)
-- [How to submit]()
+- [How to submit](#how-to-submit)
 
 # What you need to produce
 
-Pour ce devoir, vous devez réaliser le prototype de votre projet et le documenter dans un repo. Pour rappel, un repo est un espace de stockage pour garder le code de votre projet, conserver des explications de montage et montrer votre projet en fonctionnement. Une fois le travail complété, vous soumettrez le lien vers votre repo. 
+For this assignment, you are required to build a prototype of your project and document your work in a repository. A repository is a storage space used to keep your project code, provide assembly and setup instructions, and demonstrate how your project works. Once your work is complete, you will submit the link to your repository.
 
-| cours | ce qui est attendu | où le documenter dans le repo | 
+| course | required deliverable | where to document it in the repository |
 |---|---|---|
-| **cwiot** | [Code of the electronic part](#code)| dans le fichier [arduinoCode.ino↗](your-name/arduinoCode.ino) |
-| **cwiot** | [Schematic view](#schematic-view) | dans le fichier [documentation.md↗](your-name/documentation.md) |
-| **dww** | [Moodboard](#moodboard) | dans le fichier [documentation.md↗](your-name/documentation.md) |
-| **dww** | [UI on figma](#user-flow) | dans le fichier [documentation.md↗](your-name/documentation.md) |
-| **dww** | [Code of the web part](#user-flow) | dans le dossier [web-prototype↗](your-name/web-prototype/) |
-| **cwiot & dww**| [video demo](#video)| dans le fichier [documentation.md↗](your-name/documentation.md)|
+| **cwiot** | [Code of the electronic part](#code)| in the [arduinoCode.ino↗](your-name/arduinoCode.ino) file |
+| **cwiot** | [Schematic view](#schematic-view) | in the [documentation.md↗](your-name/documentation.md) file|
+| **dww** | [Moodboard](#moodboard) | in the [documentation.md↗](your-name/documentation.md) file |
+| **dww** | [UI on figma](#user-flow) | in the [documentation.md↗](your-name/documentation.md) file |
+| **dww** | [Code of the web part](#user-flow) | in the [web-prototype↗](your-name/web-prototype/) folder |
+| **cwiot & dww**| [Video demo](#video)| in the [documentation.md↗](your-name/documentation.md) file |
 
 
 ## cwiot part
 
 ### Code
-Écrivez le code dans l'éditeur arduino, comme pour les exercices précédents. Une fois que le code est fonctionnel, copiez l'ensemble de votre code depuis arduino. Collez le ensuite dans le fichier [arduinoCode.ino↗](your-name/arduinoCode.ino). 
+Write your code in the Arduino IDE, as you did for the previous exercises. Once your code is functional, copy the complete code from Arduino and paste it into the [arduinoCode.ino↗](your-name/arduinoCode.ino) file.
 
 >[!TIP]
->Si vous avez plusieurs fichiers, comme un fichier `config.h`, créez un deuxième fichier dans votre repo. Il vous suffit de faire `right click > new file`. 
+>If your project contains multiple files, such as a `config.h` file, create an additional file in your repository. You can do this by selecting `right click > new file`.
+
 
 >[!WARNING]
->Pensez bien à cacher votre clé API adafruit.\
-`#define IO_KEY "aio_SaAN10nJiIl3jGsTI5vMODMjIQ6g" ` devient `#define IO_KEY "XXX"`
+>Make sure to hide your Adafruit API key.\
+` #define IO_KEY "aio_SaAN10nJiIl3jGsTI5vMODMjIQ6g" ` should become ` #define IO_KEY "XXX" `
 
-Si vous avez fait des changements importants dans votre projet, conserver les versions de votre projet en créant des dossiers:
+If you have made significant changes to your project, preserve different versions of your project by creating separate folders:
 
 Example folder structure:
 ```arduino
@@ -50,7 +51,7 @@ cwiot
 
 ### Schematic view
 
-Pour rappel, voici ce qui est attendu pour une schematic view. Vous devez la dessiner vous-même, à la main ou à l'aide d'un logiciel de dessin. L'exemple ci-dessous a été réalisé avec figma. Les schematics view générées "automatiquement" via un logiciel, comme tinkerCAD, ne seront pas évaluées. 
+The following example illustrates what is expected for a schematic view. You must create the schematic view yourself, either by hand or using a drawing software. The example below was created using Figma. Automatically generated schematic views created with software such as Tinkercad will not be assessed.
 
 <!-- this a way to add an image an modify its displayed size-->
 <picture>
@@ -62,7 +63,7 @@ Pour rappel, voici ce qui est attendu pour une schematic view. Vous devez la des
     />
 </picture>
 
-Pour ajouter votre schematic view dans votre `documentation.md`, il faut ajouter votre image dans le dossier [your-name/images↗](your-name/images/). Une fois l'image présente dans le dossier, il vous suffira de modifier le chemin relatif vers votre image dans le fichier `documentation.md`.
+To add your schematic view to your `documentation.md` file, place your image in the [your-name/images↗](your-name/images/) folder. Once the image has been added to the folder, modify the relative path to the image in the `documentation.md` file.
 
 ```
 <picture>
@@ -78,10 +79,10 @@ Pour ajouter votre schematic view dans votre `documentation.md`, il faut ajouter
 ## dww part
 
 ### Moodboard
-Add an image of your moodboard in your `documentation.md` file.
+Add an image of your moodboard to your `documentation.md` file.
 
 >[!TIP]
-> Suivez les étapes suivantes pour exporter votre moodboard figma au format jpeg (ou png) et l'ajouter à votre repo. 
+> Follow the steps below to export your Figma moodboard as a JPEG (or PNG) file and add it to your repository.
 
 <picture>
   <img
@@ -92,29 +93,30 @@ Add an image of your moodboard in your `documentation.md` file.
 </picture>
 
 >[!TIP]
->Pour ajouter une image de votre moodboard dans votre `documentation.md`, suivez les informations de la section [schematic view↗](#schematic-view).
+>To add an image of your moodboard to your `documentation.md` file, follow the instructions provided in the [schematic view↗](#schematic-view) section.
 
 ### Figma UI
-Partagez un lien public vers votre projet figma. Suivez les étapes ci-dessous pour récupérer le lien public vers votre projet.
+Share a public link to your Figma project. Follow the steps below to obtain the public link to your project.
 
 ![share your figma project](demo/images/public-share.jpg)
 
 >[!TIP]
->Pour vous assurer que je pourrais ouvrir le lien, essayez de l'ouvrir dans votre navigateur, dans un onglet de navigation privée. S'il s'ouvre, j'y aurais accès. Si je n'y ai pas accès, je ne pourrais pas évaluer cette partie du travail.
+>To make sure that the project can be accessed, try opening the link in your browser using a private or incognito window. If you can open it, the project should be accessible for assessment. If you cannot access it, the project cannot be assessed.
 
-Dans la `documentation.md`, il vous suffit de changer l'url dans la parenthèse: `[figma UI↗](https://figma.com/your-design)`
+In the `documentation.md` file, simply replace the URL inside the parentheses: `[Figma UI↗](https\://figma.com/your-design)`
+
 
 ### Code
-Vous devez partager l'intégralité du code de votre interface web. Je vous conseille de travailler directement dans le dossier [web-prototype↗](your-name/web-prototype/). Vos fichiers html, css et javascript doivent se trouver dans ce dossier. 
+You must provide the complete source code for your web interface. It is recommended that you work directly in the [web-prototype↗](your-name/web-prototype/) folder. Your HTML, CSS, and JavaScript files should be located in this folder.
 
 ## cwiot & dww part
 
 ### video
 You must present your project through a short demonstration video.
 
-The goal of the video is not only to show that your prototype works. You should also explain what you designed, why you designed it, and how the different parts of your project communicate with each other.
+The purpose of the video is not only to demonstrate that your prototype works. You should also explain what you designed, why you designed it, and how the different parts of your project communicate with one another.
 
-Your video should be 1 to 3 minutes long. Il n'y a pas d'attentes sur la longueur de la vidéo, ni sur sa "qualité plastique". Faites simple et communicant. 
+Your video should be **1 to 3 minutes long**. There are no specific expectations regarding the length or production quality of the video. Keep it simple, clear, and communicative.
 
 You can use the following structure as a guideline.
 
@@ -183,41 +185,46 @@ For example:
 
 >"This prototype allowed us to connect a physical input to a web interface in real time. If we continued developing the project, we would improve the reliability of the sensor and explore more complex interactions between the physical environment and the website."
 
-**:movie_camera: De l'aide pour créer votre vidéo**
-Pour cette partie, voici quelques conseils pour vous aider à créer votre vidéo.
- - Installez-vous dans un endroit calme.
- - Filmez avec votre téléphone.
- - Demandez de l'aide au professeur ou à un camarade pour vous aider à filmer ou manipuler le prototype. 
- - Vous pouvez utiliser un outil gratuit pour faire des montages simples, comme le [video editor de canva↗](https://www.canva.com/video-editor/) ou [Kapwing↗](https://www.kapwing.com/studio/editor).
+**:movie_camera: Help with creating your video**
+The following recommendations can help you create your video.
+- Record your video in a quiet environment.
+- Use your phone to record the video. (No need for a fancy camera)
+- Ask your instructor or a classmate to help you record the video or interact with the prototype.
+- You can use a free tool for simple video editing, such as [Canva Video Editor↗](https\://www.canva.com/video-editor/) or [Kapwing↗](https\://www.kapwing.com/studio/editor). (Not mandatory)
 
-Une fois que vous avez votre vidéo, je vous conseille de l'héberger sur [youtube↗](https://www.youtube.com/) en suivant les étapes ci-dessous, puis de créer un lien depuis votre fichier [documentation.md↗](your-name/documentation.md).
+Once your video is ready, it is recommended that you upload it to [YouTube↗](https\://www.youtube.com/) by following the steps below. You should then create a link to the video from your [documentation.md↗](your-name/documentation.md) file.
 
-![how to upload a video to youtube](demo/images/youtube-video-update.jpg)
+![how to upload a video to YouTube](demo/images/youtube-video-update.jpg)
 
-Une fois ce lien récupéré, il ne vous reste plus qu'à modifier votre fichier [documentation.md↗](your-name/documentation.md) en changeant le lien vers la vidéo.
+Once you have obtained the link, update your `documentation.md` file by replacing the existing video link.
+
 
 ```
 link to video: [documentation video↗](https://www.youtube.com/path/to/your/video).
 ```
 
 
-# Comment documenter mon travail
+# How to document your work
 
-Comme avez pu le voir, la plupart de votre travail doit être documenté dans le fichier [documentation.md↗](/your-name/documentation.md). C'est le fichier qui sert de page d'accueil dans un repo github. Ce fichier `documentation.md` est écrit en markdown. C'est un langage utilisé dans de nombreux éditeurs de textes, comme notion par exemple. Vous trouverez un guide de la syntaxe sur github: [Basic writing and formatting syntax↗️](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). Le fichier [documentation.md↗](/your-name/documentation.md) est un template que vous devriez vous appropriez et adapter à votre projet.
+As you have seen, most of your work should be documented in the [documentation.md↗](/your-name/documentation.md) file. This file serves as the homepage of a GitHub repository.
 
-Voici les bases de la syntaxe:
+The `documentation.md` file is written in Markdown, a markup language used by many text editors and documentation tools, such as Notion. You can find a guide to Markdown syntax on GitHub: [Basic writing and formatting syntax↗️](https\://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+
+The [documentation.md↗](/your-name/documentation.md) file is a template that you should adapt to your project.
+
+Here are the basics of the syntax:
 ```
-#Header 1     ⬅️ vous donnera un titre de niveau 1
-##Header 2    ⬅️ vous donnera un titre de niveau 2
-###Header 3   ⬅️ vous donnera un titre de niveau 3
+#Header 1     ⬅️ Creates a level 1 heading
+##Header 2    ⬅️ Creates a level 2 heading
+###Header 3   ⬅️ Creates a level 4 heading
 
-*Mon texte en gras*         ⬅️ pour mettre un texte en gras
-_Mon texte en italique_     ⬅️ pour mettre un texte en italique
-`mon bout de code`          ⬅️ pour mettre un texte dans un code
+*Mon texte en gras*         ⬅️ makes text bold
+_Mon texte en italique_     ⬅️ makes text italic
+`mon bout de code`          ⬅️ disaplays text as code
 
-[mon texte](https://mon-lien.com)   ⬅️ pour créer un lien
-![My image](link/to/image.png)      ⬅️ pour ajouter une image
-<picture>                           ⬅️ version alternative pour décider la width et la height de votre image.
+[mon texte](https://mon-lien.com)   ⬅️ creates a link
+![My image](link/to/image.png)      ⬅️ adds an image
+<picture>                           ⬅️ an alternative way to specify the width and height of your image.
     <img
         src="demo/images/schematic-view.png" 
         alt="schematic view" 
@@ -228,20 +235,21 @@ _Mon texte en italique_     ⬅️ pour mettre un texte en italique
 ```
 
 # Submission demo
-Vous pouvez retrouver une démo d'un rendu type pour ce devoir. Tout est rangé dans le dossier [demo↗](/demo/), notamment la page  [demo-documentation↗](/demo/demo-documentation.md).
+You can find an example of a completed submission in the [demo↗](/demo/) folder, including the [demo-documentation↗](/demo/demo-documentation.md) page.
+
 
 # Clone this repo
 
-Pour vous mettre au travail, vous devez commencer par cloner ce repo.
+To begin working on your project, you must first clone this repository.
 
 ![clone this repo](demo/images/clone-repo.jpg)
 
 # How to submit 
 
-Suivez ces étapes pour bien soumettre votre travail. Il n'y a rien de sorcier, mais prennez le temps de bien lire toute cette page, puis faites le sur votre ordinateur. Si vous avez un doute, n'hésitez pas à me faire un mp sur slack ou me demander directement au makers'lab. Je me rendrais disponible pour vous aider. 
+Follow the steps below to submit your work correctly. The process is straightforward, but take the time to read this page carefully and complete each step on your computer.
 
-Un dernier commit. Assurez-vous de bien push la dernière version de votre travail dans votre repo sur github. Je n'ai pas accès au contenu que vous gardez localement. 
+If you have any questions, feel free to send me a direct message on Slack or ask me directly at the makers'lab. I will be available to provide assistance.
 
-
+Make sure to create a final commit and push the latest version of your work to your GitHub repository. I cannot access content that remains only on your local computer.
 
 **The link to your repository must be submitted on Brightspace, under the Designing with Web course only!**
