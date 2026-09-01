@@ -121,9 +121,6 @@ Your video should be **1 to 3 minutes long**. There are no specific expectations
 
 You can use the following structure as a guideline.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-<div>
-
 **Chapitre 1: Context**
 
 - Who you are.
@@ -188,13 +185,6 @@ What did you achieve? What did you learn? Finish your video with a short conclus
 For example:
 
 >"This prototype allowed us to connect a physical input to a web interface in real time. If we continued developing the project, we would improve the reliability of the sensor and explore more complex interactions between the physical environment and the website."
-</div>
-<div>
-
-![video script](demo/images/video.png)
-
-</div>
-</div>
 
 
 **:movie_camera: Help with creating your video**
