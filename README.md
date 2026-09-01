@@ -1,3 +1,5 @@
+![cover](demo/images/cover.png)
+
 # MITID Assignment
 
 This repository is a template designed to help you complete your project for the dww and cwiot courses. It is intended to document your entire working process. Please take the time to read this page carefully before you begin working.
@@ -14,16 +16,41 @@ For this assignment, you are required to build a prototype of your project and d
 
 | course | required deliverable | where to document it in the repository |
 |---|---|---|
-| **cwiot** | [Code of the electronic part](#code)| in the [arduinoCode.ino↗](your-name/arduinoCode.ino) file |
 | **cwiot** | [Schematic view](#schematic-view) | in the [documentation.md↗](your-name/documentation.md) file|
+| **cwiot** | [Code of the electronic part](#code)| in the [arduinoCode.ino↗](your-name/arduinoCode.ino) file |
 | **dww** | [Moodboard](#moodboard) | in the [documentation.md↗](your-name/documentation.md) file |
 | **dww** | [UI on figma](#user-flow) | in the [documentation.md↗](your-name/documentation.md) file |
 | **dww** | [Code of the web part](#user-flow) | in the [web-prototype↗](your-name/web-prototype/) folder |
 | **cwiot & dww**| [Video demo](#video)| in the [documentation.md↗](your-name/documentation.md) file |
 
+![assignments](demo/images/assignments.png)
 
 ## cwiot part
+### Schematic view
 
+The following example illustrates what is expected for a schematic view. You must create the schematic view yourself, either by hand or using a drawing software. The example below was created using Figma. Automatically generated schematic views created with software such as Tinkercad will not be assessed.
+
+To add your schematic view to your `documentation.md` file, place your image in the [your-name/images↗](your-name/images/) folder. Once the image has been added to the folder, modify the relative path to the image in the `documentation.md` file.
+
+<picture>
+    <img
+        src="demo/images/schematic-view.png" 
+        alt="schematic view" 
+        height="360" 
+        width="640" 
+    />
+</picture>
+
+```
+<picture>
+    <img
+        src="images/schematic-view.png"   <- your path will look like this
+        alt="schematic view" 
+        height="360"     <------------------ match the height of your figma canvas
+        width="640"      <------------------ match the width of your figma canvas
+    />
+</picture>
+```
 ### Code
 Write your code in the Arduino IDE, as you did for the previous exercises. Once your code is functional, copy the complete code from Arduino and paste it into the [arduinoCode.ino↗](your-name/arduinoCode.ino) file.
 
@@ -49,32 +76,6 @@ cwiot
     └── config.h
 ```
 
-### Schematic view
-
-The following example illustrates what is expected for a schematic view. You must create the schematic view yourself, either by hand or using a drawing software. The example below was created using Figma. Automatically generated schematic views created with software such as Tinkercad will not be assessed.
-
-<!-- this a way to add an image an modify its displayed size-->
-<picture>
-    <img
-        src="demo/images/schematic-view.png" 
-        alt="schematic view" 
-        height="360" 
-        width="640" 
-    />
-</picture>
-
-To add your schematic view to your `documentation.md` file, place your image in the [your-name/images↗](your-name/images/) folder. Once the image has been added to the folder, modify the relative path to the image in the `documentation.md` file.
-
-```
-<picture>
-    <img
-        src="images/schematic-view.png"   <- your path will look like this
-        alt="schematic view" 
-        height="360"     <------------------ match the height of your figma canvas
-        width="640"      <------------------ match the width of your figma canvas
-    />
-</picture>
-```
 
 ## dww part
 
@@ -119,6 +120,9 @@ The purpose of the video is not only to demonstrate that your prototype works. Y
 Your video should be **1 to 3 minutes long**. There are no specific expectations regarding the length or production quality of the video. Keep it simple, clear, and communicative.
 
 You can use the following structure as a guideline.
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+<div>
 
 **Chapitre 1: Context**
 
@@ -172,7 +176,7 @@ Explain what the user finally sees or experiences. Show the result clearly.
 Whenever possible, demonstrate the complete chain in real time:
 **Sensor → Data → Internet → Website → User experience**
 
-**Chapter 5: Conclusion**
+**Chapter 4: Conclusion**
 
 What did you achieve? What did you learn? Finish your video with a short conclusion.You can mention:
 
@@ -184,6 +188,14 @@ What did you achieve? What did you learn? Finish your video with a short conclus
 For example:
 
 >"This prototype allowed us to connect a physical input to a web interface in real time. If we continued developing the project, we would improve the reliability of the sensor and explore more complex interactions between the physical environment and the website."
+</div>
+<div>
+
+![video script](demo/images/video.png)
+
+</div>
+</div>
+
 
 **:movie_camera: Help with creating your video**
 The following recommendations can help you create your video.
@@ -246,10 +258,8 @@ To begin working on your project, you must first clone this repository.
 
 # How to submit 
 
-Follow the steps below to submit your work correctly. The process is straightforward, but take the time to read this page carefully and complete each step on your computer.
-
 If you have any questions, feel free to send me a direct message on Slack or ask me directly at the makers'lab. I will be available to provide assistance.
 
 Make sure to create a final commit and push the latest version of your work to your GitHub repository. I cannot access content that remains only on your local computer.
 
-**The link to your repository must be submitted on Brightspace, under the Designing with Web course only!**
+**The url to your repository must be submitted on Brightspace, under the Designing with Web course only!**
