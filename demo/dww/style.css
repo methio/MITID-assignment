@@ -1,9 +1,8 @@
 :root{
-    --main: #FF7400;
-    --secondary-100: #FFFFFF;
-    --secondary-200: #F9F9F9;
-    --secondary-400: #BABABA;
-    --secondary-800: #141414;
+    --white: #FFFFFF;
+    --lavender: #C1B2FF;
+    --dark-green: #144127;
+    --acid-green: #CFFF0F;
 
     --space-05: 0.5em;
     --space-1: 1em;
@@ -19,155 +18,103 @@
     box-sizing: border-box;
 }
 
-/* Utilities */
-
-.is-flex{
+/* utilities */
+.flex{
     display: flex;
 }
-.row{
-    flex-direction: row;
-}
-.column{
+.flex-column{
     flex-direction: column;
 }
-.wrap{
-    flex-wrap: wrap;
+.flex-row{
+    flex-direction: row;
+}
+.align-end{
+    align-items: end;
+}
+.align-center{
+    align-items: center;
 }
 
+.smaller-gap{
+    gap: var(--space-05);
+}
+.small-gap{
+    gap: var(--space-1);
+}
+
+.full-width{
+    max-width:100%;
+}
+
+/* effect found on this forum: https://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts*/
+.sticker-effect{
+   -webkit-filter: drop-shadow(4px 4px 0 white)
+                    drop-shadow(-4px 4px 0 white)
+                    drop-shadow(4px -4px 0 white)
+                    drop-shadow(-4px -4px 0 white);
+
+    filter: drop-shadow(4px 4px 0 white)
+            drop-shadow(-4px 4px 0 white)
+            drop-shadow(4px -4px 0 white)
+            drop-shadow(-4px -4px 0 white);
+}
+
+/* all styles */
+
+h1{
+    font-family: "Fredoka One";
+    font-size: 3em;
+    font-weight: 700;
+
+    paint-order: stroke fill;
+    -webkit-text-stroke: .2em white;
+
+    padding: 1em;
+}
+h3{
+    font-weight: 400;
+}
 
 body{
+    background-color: var(--lavender);
+    color: var(--dark-green);
+    font-family: "Inter";
 
-    background-color: #fff;
-    height: 100vh;
-    font-family: "Inter", sans-serif;
-    
+
 }
 
-h3{
-    font-weight: 300;
-    font-size: 1.2em;
-    padding-bottom: var(--space-05);
+#awake-content{
+    padding: 1em;
 }
+#awake-header{
+    background-image: url("../images/shape.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
-main {
-    max-width: 852px;
-    margin: 0 auto;
-    height: 100%;
-    background-color: var(--secondary-200);
+    img{
+        width: 35%;
+        padding-top: 2em;
+    }
 }
+#cards-container{
+    padding: 1em 0em;
+}
+.card{    
+    width: 25vw;
+    border: solid 2px var(--white);
+    border-radius: 4px;
 
+    p{
+        background-color: var(--acid-green);
+        padding: .5em;
+        border-top: solid 2px var(--dark-green);
+    }
 
-#top-section{
-    justify-content: space-between;
-    align-items: baseline;
-    padding: var(--space-1);
-
-    background-color: #84DCFF;
-    min-height: 40svh;
-
-    #color-info{
-        align-self: flex-end;
+    img{
+        max-width: 100%;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        object-fit: cover;
     }
 }
 
-#bottom-section{
-    padding: var(--space-1);    
-
-    #bottom-infos{
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #color-palette-section{
-        padding: var(--space-1) 0;
-
-        #colors-container{
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            gap: 1em;
-            
-            .color-box{
-                width: 2.3em;
-                height: 2.3em;
-                
-            }
-        }
-    }
-    
-    #new-color-section{
-        padding: var(--space-2) 0;
-
-        #color-picker-container{
-            display: flex;
-            flex-direction: row;
-            /*gap: var(--space-1);*/
-            justify-content: space-between;
-
-            #color-picker{
-                /* flex-grow: 1; */
-                width: 30%;
-            }
-        }
-    }
-    
-}
-
-.button {
-    margin: var(--space-1) 0;
-    width: 100%;
-    text-align: center;
-    padding: var(--space-1) 0;
-    border-radius: .2em;
-}
-
-.primary {
-    background-color: var(--main);
-    color: var(--secondary-100);
-}
-
-
-
-
-
-.toggle {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 25px;
-}
-
-.toggle input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--secondary-400);
-  transition: 0.4s;
-  border-radius: 25px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #FFF;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: var(--main);
-}
-
-input:checked + .slider:before {
-  transform: translateX(32px);
-}

@@ -1,79 +1,90 @@
 window.addEventListener("DOMContentLoaded", () => {
 
     // setup adafruitIO requests
-    const username = "methio";
-    const activeKey = "aio_Pcdt15ROlZChsv9xdLc5S2BrVFo6";
+    const username = "secret";
+    const activeKey = "secret";
     const IO = new AdafruitIO(username, activeKey);
 
-    
-    // create boxes 
-    const colorsContainer = document.getElementById("colors-container");
-    const colors = ['#6186CC', '#61CCCA', '#3357FF', '#CC6162', '#D5BD45', '#86BD87', '#2898B4', '#E7D69D', '#8FCC61', '#B78760'];
-    let newColorInfo = "#ffffff";
+    // const pages 
+    const asleep = document.querySelector("#asleep");
+    const awake = document.querySelector("#awake");
 
-    colors.forEach(color => {
-        colorsContainer.innerHTML += `<div class="color-box" style="background-color: ${color};" data-color="${color}"></div>`;
-        console.log("color added to the page")
-    });
+    // target dom element
+    const favicon = document.querySelector("link");
 
-    let ColorBoxes = document.querySelectorAll(".color-box");
+    // a var to handle state
+    let shouldListenToFeed = true;
 
-    // color picker
-    const alwan = new Alwan("#color-picker", {
-        theme: "light",
-        popover: true,
-        toggle: true,
-        color: "#228B22",
-        position: "top-center",
-        margin: 5,
-        inputs: {
-        rgb: false,
-        hex: true,
-        hsl: false,
-        },
-        opacity: false,
-    });
+    // a function to display "asleep" mode
+    const setAsleep = () =>{
+        currentState = "asleep";
+        asleep.style.display = "flex";
+        awake.style.display = "none";
+        favicon.href = "../images/favicon-asleep.png";
+        document.title = "napping time"
+    }
+    // a function to display "awake" mode
+    const setAwake = () =>{
+        currentState = "awake";
+        awake.style.display = "flex";
+        asleep.style.display = "none";
+        favicon.href = "../images/favicon-awake.png"
+        document.title = "time for a walk"
 
-
-    alwan.on('change', (ev) => { 
-        // console.log( ntc.name(ev.hex))
-        const colorName = ntc.name(ev.hex)[1];
-        newColorInfo = document.getElementById("new-color-info");
-        newColorInfo.innerHTML = colorName;
-        const newColorButton = document.getElementById("new-color-button");
-        newColorButton.innerHTML = colorName;       
-    });
-
-    // button to create a new color box
-    const buttonCreateColor = document.getElementById("button-create-color");
-    buttonCreateColor.addEventListener("click", () => {
-        const newColor = alwan.getColor().hex;
-        colorsContainer.innerHTML += `<div class="color-box" style="background-color: ${newColor};" data-color="${newColor}"></div>`;
-        ColorBoxes = document.querySelectorAll(".color-box");
-        colorBoxListerner(ColorBoxes);
-
-    });
-
-    // listen to boxes click -> update UI and send color to display
-    const colorBoxListerner = (colorBoxesList) => {
-        colorBoxesList.forEach(box => {
-            box.addEventListener("click", (e) => { 
-                console.log(box.dataset.color);
-                const colorInfo = document.getElementById("color-info");
-                const title = colorInfo.children[0];
-                title.innerHTML = box.dataset.color;
-                const subTitle = colorInfo.children[1];
-                subTitle.innerHTML = ntc.name(box.dataset.color)[1];
-                const colorDisplay = document.getElementById("top-section");
-                colorDisplay.style.backgroundColor = box.dataset.color;
-
-                // off to avoid flooding the feed
-                 IO.postData("color25", box.dataset.color);
-            });
-        });
     }
 
-    colorBoxListerner(ColorBoxes);
+    // "awake" mode functions
+    const giveARandomImage = () => {
+        const seed = (Math.random() + 1).toString(36).substring(4);
+        return `https://picsum.photos/seed/${seed}/400/200`;
+    }
 
+    const generateACard = (location = "Lac de la thuile", imageUrl = giveARandomImage()) => {
+        return`
+        <div class="card flex flex-column">
+            <img alt="random image from picsum" src="${imageUrl}">
+            <p class="flex flex-row align-center smaller-gap"><i data-lucide="map-pin"></i> ${location}</p>
+        </div>
+        `
+    }
+    const cardsContainer = document.querySelector("#cards-container");
+    for(let i = 0; i <= 2; i++){
+        cardsContainer.innerHTML += generateACard();
+    }
+    lucide.createIcons();
+
+    // update displayed hours and minutes every minute
+    const timeDisplay = document.querySelector("#currentTime");
+    const updateTimeDisplay = () => {
+        const cdate = new Date();
+        const h = cdate.getHours()<10 ? "0" + cdate.getHours() : cdate.getHours(); // add a 0 if needed
+        const m = cdate.getMinutes()<10 ? "0" + cdate.getMinutes() : cdate.getMinutes(); // add a 0 if needed
+        timeDisplay.innerHTML = `${h}:${m}`;
+    }
+    updateTimeDisplay();
+    setInterval( ()=>{
+        updateTimeDisplay();
+    }, 60000);
+    
+
+    
+
+
+    // start hiding "awake" state
+    let currentState = "asleep";
+    setAsleep();
+    // setAwake();
+
+    // repeatadily fetch data from our feed
+    setInterval(()=>{
+        IO.getData("button", function(data){
+            const incomingDataEpoch = Number(data.json[0].created_epoch);   // date of creation of last value in the feed
+            const currentEpoch = Math.floor(Date.now() / 1000);             // current date 
+            const difference = currentEpoch - incomingDataEpoch;            // difference to make sure latest value is "fresh"
+            if(difference <= 10){
+                setAwake();
+            }                   
+        });
+    },4000)
 
 });
